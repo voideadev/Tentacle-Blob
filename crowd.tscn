@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://crowd.gd" id="1"]
+
+[node name="Crowd" type="Node2D" groups=["crowd"]]
+script = ExtResource("1")

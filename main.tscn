@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://p1rp145agryt"]
+
+[ext_resource type="Script" uid="uid://bbtm4lfdudoyg" path="res://main.gd" id="1"]
+[ext_resource type="PackedScene" path="res://world.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://crowd.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="4"]
+
+[node name="Main" type="Node2D" unique_id=1440539135]
+script = ExtResource("1")
+
+[node name="World" parent="." unique_id=1804171218 instance=ExtResource("2")]
+
+[node name="Crowd" parent="." unique_id=1314952447 instance=ExtResource("3")]
+
+[node name="Actors" type="Node2D" parent="." unique_id=725047645]
+
+[node name="Player" parent="." unique_id=1736223290 instance=ExtResource("4")]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=768510293]
+layer = 10
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=945915230]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 900.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "Biomasa 0"
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="HUD" unique_id=375773409]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -240.0
+offset_right = 260.0
+offset_bottom = -40.0
+grow_vertical = 0
+joystick_size = 150.0
+tip_size = 70.0
+deadzone_ratio = 0.15
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
